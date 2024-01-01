@@ -7,4 +7,10 @@ brain-games:
 publish:
 	npm publish --dry-run
 
+lint:
+	npx eslint .
+
+fix:
+	npx eslint --fix .
+
 .PHONY: test
