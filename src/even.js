@@ -18,7 +18,11 @@ const evenFunc = (randomNum, name) => {
       }
     } else {
       count = 0;
-      answer === 'yes' ? console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`) : console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
+      if (answer === 'yes') {
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
+      } else {
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
+      }
       console.log(`Let's try again, ${name}!`);
       loop = false;
     }
