@@ -16,7 +16,7 @@ const evenFunc = (randomNum, name) => {
         count = 0;
         console.log(`Congratulations, ${name}!`);
       }
-    } else if ((num % 2 === 0 && answer === 'no') || (num % 2 !== 0 && answer === 'yes') || (answer !== 'yes' || answer !== 'no')) {
+    } else {
       count = 0;
       if (answer === 'yes') {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
