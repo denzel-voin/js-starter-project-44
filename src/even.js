@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 
 const random = () => Math.floor(Math.random() * 100 + 1);
-let loop = true;
-let count = 0;
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const evenFunc = (randomNum, name) => {
+  let loop = true;
+  let count = 0;
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (loop) {
     const num = randomNum();
     const answer = readlineSync.question(`Question: ${num} \n`);
