@@ -5,12 +5,13 @@ const random = () => Math.floor(Math.random() * 100 + 1);
 const evenFunc = (randomNum, name) => {
   let count = 0;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  while (true) {
+  while (name) {
     const num = randomNum();
     const answer = readlineSync.question(`Question: ${num} \n`);
     if ((num % 2 === 0 && answer === 'yes') || (num % 2 !== 0 && answer === 'no')) {
       console.log('Correct!');
-      if (++count === 3) {
+      count += 1;
+      if (count === 3) {
         count = 0;
         console.log(`Congratulations, ${name}!`);
       }
@@ -19,10 +20,9 @@ const evenFunc = (randomNum, name) => {
       const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
-      break
+      break;
     }
   }
 };
-
 
 export { random, evenFunc };
