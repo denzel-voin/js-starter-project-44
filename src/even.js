@@ -4,8 +4,10 @@ const random = () => Math.floor(Math.random() * 100 + 1);
 
 const evenFunc = (randomNum, name) => {
   let count = 0;
+  let itter = 0;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  while (name) {
+  while (itter < 3) {
+    itter += 1;
     const num = randomNum();
     const answer = readlineSync.question(`Question: ${num} \n`);
     if ((num % 2 === 0 && answer === 'yes') || (num % 2 !== 0 && answer === 'no')) {
