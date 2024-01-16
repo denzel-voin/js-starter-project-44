@@ -9,7 +9,7 @@ const evenFunc = (name) => {
     itter += 1;
     const num = randomNum();
     const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
-    const answer = readlineSync.question(`Question: ${num} \n`);
+    const answer = readlineSync.question(`Question: ${num} \nYour answer: `);
     checkAnswer(correctAnswer, answer, name);
     if (correctAnswer !== answer) break;
     count += 1;

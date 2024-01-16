@@ -12,7 +12,7 @@ const calcFunc = (name) => {
     const num1 = randomNum();
     const num2 = randomNum();
     const symbol = randomSymbol();
-    const answer = readlineSync.question(`Question: ${num1} ${symbol} ${num2} \n`);
+    const answer = readlineSync.question(`Question: ${num1} ${symbol} ${num2} \nYour answer: `);
     const userNum = Number(answer);
     const trueAnswer = expression(symbol, num1, num2);
     checkAnswer(trueAnswer, userNum, name);

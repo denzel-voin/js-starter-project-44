@@ -1,4 +1,6 @@
-const randomNum = () => Math.floor(Math.random() * 100 + 1);
+const min = 1;
+const max = 100;
+const randomNum = () => Math.floor(Math.random() * max + min);
 
 const checkAnswer = (trueAnswer, userAnswer, name) => {
   if (trueAnswer === userAnswer) {
@@ -25,6 +27,12 @@ const expression = (randomSym, num1, num2) => {
   return trueAnswer;
 };
 
+const gcd = (firstNum, secondNum) => {
+  for (let i = max; i >= min; i--) {
+    if (firstNum % i === 0 && secondNum % i === 0) return i
+  }
+}
+
 export {
-  checkAnswer, randomNum, randomSymbol, expression,
+  checkAnswer, randomNum, randomSymbol, expression, gcd
 };
