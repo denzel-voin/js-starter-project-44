@@ -2,6 +2,15 @@ import readlineSync from 'readline-sync';
 
 const random = () => Math.floor(Math.random() * 100 + 1);
 
+const checkAnswer = (trueAnswer, userAnswer, name) => {
+  if (trueAnswer === userAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
+    console.log(`Let's try again, ${name}!`);
+  }
+};
+
 const evenFunc = (randomNum, name) => {
   let count = 0;
   let itter = 0;
@@ -9,22 +18,13 @@ const evenFunc = (randomNum, name) => {
   while (itter < 3) {
     itter += 1;
     const num = randomNum();
+    const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
     const answer = readlineSync.question(`Question: ${num} \n`);
-    if ((num % 2 === 0 && answer === 'yes') || (num % 2 !== 0 && answer === 'no')) {
-      console.log('Correct!');
-      count += 1;
-      if (count === 3) {
-        count = 0;
-        console.log(`Congratulations, ${name}!`);
-      }
-    } else {
-      count = 0;
-      const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
-      break;
-    }
+    checkAnswer(correctAnswer, answer, name)
+    if(correctAnswer !== answer) break
+    count +=1
+    if (count === 3) console.log(`Congratulations, ${name}!`);
   }
 };
 
-export { random, evenFunc };
+export { random, evenFunc, checkAnswer };
