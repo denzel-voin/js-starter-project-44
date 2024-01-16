@@ -1,5 +1,6 @@
-import { calcFunc, randomNumber, randomSymbol } from '../src/calc.js';
-import greeting from '../src/cli.js';
+#!/usr/bin/env node
+import calcFunc from '../src/games/calc.js';
+import greeting from '../src/games/cli.js';
 
 const userName = greeting();
-calcFunc(randomNumber, randomSymbol, userName);
+calcFunc(userName);
