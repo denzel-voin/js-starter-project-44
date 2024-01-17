@@ -28,11 +28,12 @@ const expression = (randomSym, num1, num2) => {
 };
 
 const gcd = (firstNum, secondNum) => {
-  for (let i = max; i >= min; i--) {
-    if (firstNum % i === 0 && secondNum % i === 0) return i
+  for (let i = max; i >= min; i -= 1) {
+    if (firstNum % i === 0 && secondNum % i === 0) return i;
   }
-}
+  return null;
+};
 
 export {
-  checkAnswer, randomNum, randomSymbol, expression, gcd
+  checkAnswer, randomNum, randomSymbol, expression, gcd,
 };

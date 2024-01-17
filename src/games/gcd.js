@@ -1,5 +1,5 @@
-import {checkAnswer, gcd, randomNum} from "../index.js";
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
+import { checkAnswer, gcd, randomNum } from '../index.js';
 
 const gcdFunc = (name) => {
   let count = 0;
@@ -17,6 +17,6 @@ const gcdFunc = (name) => {
     count += 1;
     if (count === 3) console.log(`Congratulations, ${name}!`);
   }
-}
+};
 
-export default gcdFunc
+export default gcdFunc;
