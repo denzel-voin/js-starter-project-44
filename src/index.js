@@ -46,6 +46,14 @@ const randomArray = () => {
   return arrNums;
 };
 
+const primeNum = (num) => {
+  let count = 0;
+  for (let i = num; i > 0; i -= 1) {
+    if (num % i === 0) count += 1;
+  }
+  return count === 2 ? 'yes' : 'no';
+};
+
 export {
-  checkAnswer, randomNum, randomSymbol, expression, gcd, randomArray,
+  checkAnswer, randomNum, randomSymbol, expression, gcd, randomArray, primeNum,
 };
