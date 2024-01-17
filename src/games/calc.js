@@ -9,8 +9,8 @@ const calcFunc = (name) => {
   console.log('What is the result of the expression?');
   while (itter < 3) {
     itter += 1;
-    const num1 = randomNum();
-    const num2 = randomNum();
+    const num1 = randomNum(1, 100);
+    const num2 = randomNum(1, 100);
     const symbol = randomSymbol();
     const answer = readlineSync.question(`Question: ${num1} ${symbol} ${num2} \nYour answer: `);
     const userNum = Number(answer);

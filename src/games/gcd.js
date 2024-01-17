@@ -7,8 +7,8 @@ const gcdFunc = (name) => {
   console.log('Find the greatest common divisor of given numbers.');
   while (itter < 3) {
     itter += 1;
-    const numFirst = randomNum();
-    const numSecond = randomNum();
+    const numFirst = randomNum(1, 100);
+    const numSecond = randomNum(1, 100);
     const correctAnswer = gcd(numFirst, numSecond);
     const answer = readlineSync.question(`Question: ${numFirst} ${numSecond} \nYour answer: `);
     const userAnswer = Number(answer);
