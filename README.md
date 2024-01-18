@@ -25,7 +25,7 @@ Make sure you have installed Node.js version 13 or higher.
    `cd js-starter-project-44`
 3. Install packages:
    `npm install`
-
+   [![asciicast](https://asciinema.org/a/26EdFeICNqvJGsvSBlmDMl407.svg)](https://asciinema.org/a/26EdFeICNqvJGsvSBlmDMl407)
 ## Game descriptions
 
 
