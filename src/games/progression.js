@@ -11,7 +11,7 @@ const progression = (name) => {
     const randomIndex = randomNum(0, arrNums.length - 1);
     const trueAnswer = arrNums[randomIndex];
     arrNums[randomIndex] = '..';
-    const answer = readlineSync.question(`Question: ${arrNums} \nYour answer: `);
+    const answer = readlineSync.question(`Question: ${arrNums.join(' ')} \nYour answer: `);
     const userNumber = Number(answer);
     checkAnswer(trueAnswer, userNumber, name);
     if (trueAnswer !== userNumber) break;
